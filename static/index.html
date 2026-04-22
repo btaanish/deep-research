@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Deep Research Agent</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Deep Research Agent</h1>
+        <form id="research-form">
+            <div class="field">
+                <label for="query">Research Query</label>
+                <input type="text" id="query" placeholder="Enter your research question..." required>
+            </div>
+            <div class="field">
+                <label for="api-token">API Token</label>
+                <input type="password" id="api-token" placeholder="sk-ant-...">
+            </div>
+            <button type="submit" id="submit-btn">Research</button>
+        </form>
+
+        <div id="query-history-section">
+            <h2>Query History</h2>
+            <div id="query-history"></div>
+            <button type="button" id="clear-history-btn" class="btn-secondary">Clear History</button>
+        </div>
+
+        <div id="error" class="error" hidden></div>
+
+        <div id="progress-section" hidden>
+            <h2>Progress</h2>
+            <div id="loading-spinner" class="spinner" hidden>
+                <div class="spinner-circle"></div>
+            </div>
+            <div id="sub-questions-panel" class="state-panel" hidden>
+                <h3>Sub-questions</h3>
+                <div id="sub-questions-list"></div>
+            </div>
+            <ol id="progress"></ol>
+        </div>
+
+        <div id="result-section" hidden>
+            <h2>Result</h2>
+            <div class="result-actions" id="result-actions" hidden>
+                <button type="button" id="copy-result-btn" class="btn-secondary">Copy to Clipboard</button>
+                <button type="button" id="download-result-btn" class="btn-secondary">Download as .txt</button>
+            </div>
+            <div id="result"></div>
+        </div>
+    </div>
+    <script src="/static/app.js"></script>
+</body>
+</html>
