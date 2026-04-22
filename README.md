@@ -63,10 +63,13 @@ This state is serializable and used for streaming updates to the frontend.
 - model selection defaults
 - concurrency limiting via the semaphore(runs with the basic tier)
 - prompt forwarding
-- text-block extraction from responses
+- text-block extraction from responsesRecurrent Query memory locally to seek further clarifications if some aspects of the intial result were unsatisfactory
+---
+## Add On
+
+Recurrent Query memory locally to seek further clarifications if some aspects of the intial result were unsatisfactory.
 
 ---
-
 ### Install
 
 ```bash
